@@ -1,16 +1,15 @@
-import tweepy
-from textblob import TextBlob
+import math
+
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import math
-from keras.models import Sequential
+import tweepy
 from keras.layers import Dense
 from keras.layers import LSTM
-from sklearn.svm import SVR
-from sklearn.preprocessing import MinMaxScaler
+from keras.models import Sequential
 from sklearn.metrics import mean_squared_error
-import matplotlib.pyplot as plt
-
+from sklearn.preprocessing import MinMaxScaler
+from textblob import TextBlob
 
 # Step 1 - Insert your API keys
 CONSUMER_KEY = '2ikoi79lK5IUgmRWEe5aE3O36'
@@ -25,6 +24,7 @@ np.random.seed(seed)
 
 dates = []
 prices = []
+bitcoin_sentiment = []
 
 
 # Twitter authentication and search
@@ -36,25 +36,43 @@ def twitter_search(text):
     
     # Step 2 - Search for your text on Twitter
     public_tweets = api.search(text)
+    print(public_tweets[2].text)
 
+    for tweet in tweepy.Cursor(api.search,
+                               q=text,
+                               rpp=100,
+                               count=20,
+                               result_type="recent",
+                               include_entities=True,
+                               lang="en").items(200):
+        print(tweet)
+    
     # Step 3 - Define a threshold for each sentiment to classify each
     # as positive or negative. If the majority of tweets you've collected are positive
     # then use your neural network to predict a future price
-    try:
-        for tweet in public_tweets:
-            analysis = TextBlob(tweet.text)
-            print(analysis.sentiment)
-    except UnicodeEncodeError as uee:
-        print(uee)
+    threshold = 0.5
+    pos_tweet = 0
+    pos_sentiment = ()
+    neg_tweet = 0
+    neg_sentiment = ()
+
+    for tweet in public_tweets:
+        analysis = TextBlob(tweet.text)
+        bitcoin_sentiment.append(analysis.sentiment)
+        print(analysis.sentiment)
+        if analysis.sentiment.polarity >= threshold:
+            pos_tweet += 1
+        else:
+            neg_tweet += 1
+    if pos_tweet > neg_tweet:
+        print("Overall Positive")
+    else:
+        print("Overall Negative")
 
 
 # data collection
 def get_data(filename):
     df = pd.read_csv(filename, header=0, delimiter=",", quoting=3)
-    # print(df)
-    # print(df.columns)
-    # print(df['Date'])
-    # print(df['Close'])
 
     for row in df['Date']:
         dates.append(int(row.split('/')[1]))
@@ -67,99 +85,115 @@ def get_data(filename):
 
 
 # Convert an array of values into a dataset matrix
-def create_dataset(dataset, look_back=1):
+def create_datasets(dataset, look_back=1):
     data_x, data_y = [], []
     for i in range(len(dataset)-look_back-1):
-        a = dataset[i:(i+look_back), 0]
-        data_x.append(a)
+        data_x.append(dataset[i:(i+look_back), 0])
         data_y.append(dataset[i + look_back, 0])
     return np.array(data_x), np.array(data_y)
 
 
-# Step 6 In this function, build your neural network model using Keras, train it, then have it predict the price
+# Built Long Short-Term Memory Network model using Keras for regreesion, trained it, then have it predict the price
 # on a given day. We'll later print the price out to terminal.
-def predict_prices(in_dates, in_prices, x):
-    in_dates = np.reshape(in_dates, (len(in_dates), 1))
-    in_prices = np.reshape(in_prices, (-1, 1))
+def predict_prices(in_dates, in_prices):
+    # in_dates = np.reshape(in_dates, (len(in_dates), 1))
     print(in_prices)
-    
-    # print(in_dates, sep='\n')
-    # print(in_prices, sep='\n')
     
     # Normalize the price data set
     scaler = MinMaxScaler(feature_range=(0, 1))
     prices_dataset = scaler.fit_transform(in_prices)
-    print(prices_dataset)
     
     # Split into train and test sets
-    train_size = int(len(prices_dataset) * 0.67)
-    test_size = len(prices_dataset) - train_size
+    train_size = int(len(prices_dataset) * 0.67)    # 20
+    test_size = len(prices_dataset) - train_size    # 11
+    
     train, test = prices_dataset[0:train_size, :], prices_dataset[train_size:len(prices_dataset), :]
-    print(len(train), len(test))
-    print('train \n{} \ntest \n{}'.format(train, test))
     
     # Reshape into X=t and Y=t+1
-    look_back = 1
-    train_x, train_y = create_dataset(train, look_back)
-    test_x, test_y = create_dataset(test, look_back)
-
+    look_back = 3
+    train_x, train_y = create_datasets(train, look_back)
+    test_x, test_y = create_datasets(test, look_back)
+    
+    print('Before Reshape\n')
+    print(train_x.shape)
+    print(test_x.shape)
+    
     # Reshape input to be [samples, time steps, features]
-    train_x = np.reshape(train_x, (train_x.shape[0], 1, train_x.shape[1]))
-    test_x = np.reshape(test_x, (test_x.shape[0], 1, test_x.shape[1]))
+    train_x = np.reshape(train_x, (train_x.shape[0], train_x.shape[1], 1))
+    test_x = np.reshape(test_x, (test_x.shape[0], test_x.shape[1], 1))
+    
+    print('After Reshape\n')
+    print(train_x.shape)
+    print(train_x)
+    print(test_x.shape)
+    print(test_x)
     
     # Create and fit the LSTM network
+    print('Build model...')
+    batch_size = 1
     model = Sequential()
-    model.add(LSTM(4, input_dim=look_back))
+    model.add(LSTM(4, batch_input_shape=(batch_size, look_back, 1), stateful=True, return_sequences=True))
+    model.add(LSTM(4, batch_input_shape=(batch_size, look_back, 1), stateful=True))
     model.add(Dense(1))
     model.compile(loss='mean_squared_error', optimizer='adam')
-    model.fit(train_x, train_y, nb_epoch=100, batch_size=1, verbose=2)
+    for i in range(100):
+        model.fit(train_x, train_y, nb_epoch=100, batch_size=batch_size, verbose=2, shuffle=False)
+        model.reset_states()
     
-    # print('support vector regression linear')
-    # svr_lin = SVR(kernel='linear', C=1e3)   # C=1e3 Scientific Notation for 1000
-    # print('support vector regression ploy')
-    # svr_poly = SVR(kernel='poly', C=1e3, degree=2, cache_size=500)
-    # print('support vector regression rbf')
-    # svr_rbf = SVR(kernel='rbf', C=1e3, gamma=0.1)
-
-    # print('svr linear fit')
-    # svr_lin.fit(in_dates, in_prices)
-    # print('svr poly fit')
-    # svr_poly.fit(in_dates, in_prices)
-    print('svr rbf fit')
-    # svr_rbf.fit(in_dates, in_prices)
-
-    # plt.scatter(in_dates, in_prices, color='black', label='Data')
-    # plt.plot(in_dates, svr_lin.predict(in_dates), color='green', label='Linear model')
-    # plt.plot(in_dates, svr_poly.predict(in_dates), color='blue', label='Polynomial model')
-    # plt.plot(in_dates, svr_rbf.predict(in_dates), color='red', label='RBF model')
-    # plt.xlabel('Date')
-    # plt.ylabel('Price')
-    # plt.title('Support Vector Regression')
-    # plt.legend()
-    # plt.show()
-
-    # return svr_lin.predict(x)[0], svr_rbf.predict(x)[0]
-    return
+    # Make predictions
+    train_prediction = model.predict(train_x, batch_size=batch_size)
+    model.reset_states()
+    test_prediction = model.predict(test_x, batch_size=batch_size)
+    
+    # Invert predictions
+    train_prediction = scaler.inverse_transform(train_prediction)
+    train_y = scaler.inverse_transform([train_y])
+    
+    test_prediction = scaler.inverse_transform(test_prediction)
+    test_y = scaler.inverse_transform([test_y])
+    
+    # Calculate root mean squared error
+    train_score = math.sqrt(mean_squared_error(train_y[0], train_prediction[:, 0]))
+    print('Train Score: {:10.4f} RMSE'.format(train_score))
+    
+    test_score = math.sqrt(mean_squared_error(test_y[0], test_prediction[:, 0]))
+    print('Test Score: {:10.4f} RMSE'.format(test_score))
+    
+    # Shift train predictions for plotting
+    train_prediction_plot = np.empty_like(prices_dataset)
+    train_prediction_plot[:, :] = np.nan
+    train_prediction_plot[look_back:len(train_prediction)+look_back, :] = train_prediction
+    
+    # Shift test predictions for plotting
+    test_prediction_plot = np.empty_like(prices_dataset)
+    test_prediction_plot[:, :] = np.nan
+    test_prediction_plot[len(train_prediction) + (look_back * 2) + 1: len(prices_dataset) - 1, :] = test_prediction
+    
+    # Plot baseline and predictions
+    plt.plot(scaler.inverse_transform(prices_dataset))
+    plt.plot(train_prediction_plot)
+    plt.plot(test_prediction_plot)
+    plt.show()
+    
+    return train_score, test_score
 
 
 def main():
     # twitter_search('Bitcoin')
 
-    # Step 5 reference your CSV file here
-    get_data('coindesk-bpi-USD-close2.csv')
+    # Reference CSV file here
+    # get_data('coindesk-bpi-USD-close2.csv')
 
-    # predicted_price = predict_prices(dates, prices, 29)
-    # print(predicted_price)
+    # plt.plot(prices)
+    # plt.show()
     
-    predict_prices(dates, prices, 29)
+    # predict_prices(dates, prices)
 
-    # load dataset
-    # dataframe = pd.read_csv("housing.csv", delim_whitespace=True, header=None)
-    # dataset = dataframe.values
-    # split into input (X) and output (Y) variables
-    # X = dataset[:, 0:13]
-    # Y = dataset[:, 13]
-    # print('X{} Y{}'.format(X, Y))
-
+    # load the dataset
+    dataframe = pd.read_csv('coindesk-bpi-USD-close2.csv', usecols=[1], engine='python')
+    dataset = dataframe.values
+    dataset = dataset.astype('float32')
+    predict_prices(dates, dataset)
+    
 if __name__ == '__main__':
     main()
