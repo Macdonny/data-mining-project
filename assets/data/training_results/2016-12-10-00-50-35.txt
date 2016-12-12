@@ -1,0 +1,6 @@
+Train on 48 samples, validate on 48 samples
+Epoch 1/2
+48/48 [==============================] - 57s - loss: 0.6848 - acc: 0.7500 - val_loss: 0.6467 - val_acc: 0.6667
+Epoch 2/2
+48/48 [==============================] - 59s - loss: 0.6138 - acc: 0.7500 - val_loss: 0.6366 - val_acc: 0.6667
+Accuracy: 66.67%

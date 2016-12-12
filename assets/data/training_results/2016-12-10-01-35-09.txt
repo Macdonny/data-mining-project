@@ -1,0 +1,223 @@
+Querying Twitter...
+Overall Negative
+Creating the vector of tweets...
+
+['account', 'aceconcierge', 'africa', 'aifs', 'almost', 'altcoin', 'ancap', 'anonymous', 'approaching', 'ark', 'augur', 'automatic', 'awe', 'bank', 'banks', 'bet', 'betbybitcoins', 'bigdata', 'bitcoin', 'bitcoins', 'bitgo', 'bitstamp', 'blockcdn', 'blockchain', 'bobby', 'bonus', 'btc', 'business', 'buy', 'cap', 'card', 'cash', 'change', 'check', 'chichicardsuk', 'co', 'coinbase', 'coindesk', 'contact', 'continuity', 'could', 'create', 'crypto', 'cryptocoinsnews', 'cryptocurrency', 'ctm', 'currency', 'cycle', 'daily', 'dash', 'day', 'dec', 'december', 'demonetization', 'derincag', 'digital', 'distributed', 'doge', 'dogecoin', 'double', 'earn', 'eth', 'ethereum', 'eu', 'exchange', 'exchanges', 'faucet', 'finance', 'fintech', 'forbes', 'free', 'fund', 'fundamental', 'future', 'get', 'global', 'gold', 'grow', 'gvxkw', 'high', 'highest', 'highs', 'hits', 'hnhtv', 'hockey', 'hourly', 'hours', 'https', 'hyip', 'ice', 'iljqoe', 'india', 'innovation', 'inspiring', 'interested', 'internet', 'interview', 'introducing', 'invest', 'investment', 'investor', 'io', 'italy', 'kenhaberman', 'last', 'latest', 'lee', 'levels', 'like', 'live', 'lottery', 'maidsafe', 'make', 'market', 'markets', 'matters', 'mined', 'mining', 'mobile', 'money', 'mooncoin', 'mue', 'myfuturebitcoin', 'nasdaq', 'new', 'news', 'ngo', 'nhl', 'one', 'overrated', 'panama', 'paper', 'pay', 'payments', 'people', 'platform', 'points', 'positivity', 'potcoin', 'price', 'profit', 'promo', 'randyhilarski', 'remarkable', 'resistance', 'revamped', 'rt', 'safe', 'satoshi', 'sell', 'services', 'site', 'sjfpc', 'skyrockets', 'smartcontracts', 'solution', 'sqywce', 'startups', 'stevecassady', 'still', 'stock', 'storage', 'take', 'thanks', 'thi', 'three', 'tigoctm', 'time', 'tli', 'today', 'top', 'trade', 'trading', 'traffic', 'transfer', 'trump', 'trust', 'tuition', 'tx', 'underrated', 'unocoin', 'update', 'us', 'usage', 'usd', 'use', 'using', 'venezuela', 'via', 'virtual', 'wallet', 'way', 'week', 'weekend', 'white', 'wm', 'xdg', 'yabtcl', 'year', 'years']
+9 account
+10 aceconcierge
+9 africa
+34 aifs
+20 almost
+15 altcoin
+10 ancap
+9 anonymous
+15 approaching
+17 ark
+47 augur
+19 automatic
+46 awe
+21 bank
+9 banks
+24 bet
+11 betbybitcoins
+43 bigdata
+1107 bitcoin
+39 bitcoins
+25 bitgo
+15 bitstamp
+25 blockcdn
+190 blockchain
+35 bobby
+19 bonus
+249 btc
+53 business
+63 buy
+8 cap
+10 card
+19 cash
+11 change
+10 check
+10 chichicardsuk
+1042 co
+15 coinbase
+16 coindesk
+34 contact
+8 continuity
+13 could
+12 create
+79 crypto
+12 cryptocoinsnews
+116 cryptocurrency
+34 ctm
+18 currency
+42 cycle
+20 daily
+60 dash
+27 day
+11 dec
+10 december
+18 demonetization
+41 derincag
+29 digital
+19 distributed
+22 doge
+34 dogecoin
+43 double
+10 earn
+11 eth
+37 ethereum
+11 eu
+9 exchange
+12 exchanges
+33 faucet
+81 finance
+72 fintech
+13 forbes
+61 free
+84 fund
+8 fundamental
+23 future
+36 get
+11 global
+14 gold
+24 grow
+11 gvxkw
+27 high
+19 highest
+15 highs
+17 hits
+34 hnhtv
+11 hockey
+22 hourly
+20 hours
+1067 https
+20 hyip
+11 ice
+34 iljqoe
+56 india
+8 innovation
+46 inspiring
+42 interested
+12 internet
+30 interview
+42 introducing
+55 invest
+27 investment
+15 investor
+12 io
+9 italy
+10 kenhaberman
+14 last
+21 latest
+32 lee
+19 levels
+11 like
+19 live
+10 lottery
+47 maidsafe
+10 make
+9 market
+54 markets
+30 matters
+9 mined
+26 mining
+9 mobile
+17 money
+46 mooncoin
+21 mue
+10 myfuturebitcoin
+14 nasdaq
+67 new
+58 news
+34 ngo
+11 nhl
+46 one
+9 overrated
+10 panama
+16 paper
+16 pay
+22 payments
+51 people
+23 platform
+21 points
+12 positivity
+22 potcoin
+73 price
+20 profit
+22 promo
+11 randyhilarski
+47 remarkable
+21 resistance
+15 revamped
+408 rt
+12 safe
+9 satoshi
+21 sell
+8 services
+24 site
+10 sjfpc
+21 skyrockets
+16 smartcontracts
+9 solution
+15 sqywce
+13 startups
+10 stevecassady
+23 still
+19 stock
+8 storage
+20 take
+25 thanks
+41 thi
+22 three
+34 tigoctm
+30 time
+11 tli
+71 today
+13 top
+22 trade
+10 trading
+11 traffic
+10 transfer
+14 trump
+10 trust
+12 tuition
+21 tx
+9 underrated
+8 unocoin
+9 update
+56 us
+21 usage
+47 usd
+11 use
+10 using
+12 venezuela
+34 via
+10 virtual
+44 wallet
+25 way
+10 week
+8 weekend
+15 white
+11 wm
+21 xdg
+9 yabtcl
+20 year
+18 years
+Sentiment Training and Testing sets being created...
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+embedding_1 (Embedding)          (None, 70, 32)        32000       embedding_input_1[0][0]          
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 2240)          0           embedding_1[0][0]                
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 250)           560250      flatten_1[0][0]                  
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 1)             251         dense_1[0][0]                    
+====================================================================================================
+Total params: 592501
+____________________________________________________________________________________________________
+None
+Train on 498 samples, validate on 498 samples
+Epoch 1/2
+128/498 [======>.......................] - ETA: 229s - loss: 0.6874 - acc: 0.6875256/498 [==============>...............] - ETA: 151s - loss: 0.6404 - acc: 0.7266384/498 [======================>.......] - ETA: 72s - loss: 0.6276 - acc: 0.7214 498/498 [==============================] - 323s - loss: 0.6412 - acc: 0.7028 - val_loss: 0.6973 - val_acc: 0.6406

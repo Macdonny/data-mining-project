@@ -1,0 +1,467 @@
+----SENTIMENT BITCOIN PREDICTION----
+
+
+Loading Data...
+
+Received all of the data!
+
+----TWEETER TWEET SENTIMENT ANALYSIS----
+
+
+Accessing Twitter API..
+
+Querying Twitter...
+
+Overall Negative
+
+Tweets Stored!
+
+Creating the vector tweets...
+
+Vocabulary word count and word
+
+Count  Word
+14 aantonop
+9 accounts
+20 across
+18 activity
+24 address
+12 al
+11 almost
+31 also
+40 altcoin
+15 altcoins
+13 amazon
+10 analysis
+9 announced
+18 anybody
+23 anyone
+11 anything
+11 app
+17 aqv
+9 asset
+22 average
+51 away
+45 awesome
+11 back
+12 bank
+9 based
+15 basics
+32 behemoth
+15 best
+11 better
+23 bill
+14 billion
+35 bit
+16 bitc
+2183 bitcoin
+10 bitcoinbets
+13 bitcoinmarket
+17 bitcoinprice
+31 bitcoins
+16 bitcoinsportsbook
+10 bitcointalkandreas
+26 bitstamp
+60 blockcdn
+330 blockchain
+22 blockchains
+19 blog
+9 bobbyclee
+29 bonuses
+10 bought
+17 bs
+233 btc
+19 btce
+16 btctn
+30 buy
+27 byteball
+9 cable
+10 cap
+12 capital
+18 card
+19 case
+33 cash
+42 cashouts
+42 celeberate
+14 ceo
+16 check
+43 christmas
+42 circle
+16 circulation
+2340 co
+17 coin
+42 coinbase
+47 coindesk
+13 community
+10 conflicts
+32 consumer
+14 core
+10 coremedia
+10 cost
+16 could
+13 crawl
+19 crypt
+99 crypto
+80 cryptocurrency
+11 cryptojauregui
+87 currency
+16 current
+10 cwkt
+15 czk
+18 daily
+29 dailycoinsnet
+9 dapps
+22 dash
+23 data
+16 day
+10 days
+20 dclzt
+13 debt
+17 december
+10 declares
+10 designed
+11 developers
+15 digg
+67 digital
+15 disruption
+12 distribution
+11 dogecoin
+10 dollars
+42 dragon
+14 driven
+32 drops
+23 earn
+9 economics
+10 economy
+18 efgznrbxri
+12 ei
+11 elephant
+19 empty
+10 end
+120 ensures
+20 entrepreneurial
+24 eth
+95 ethereum
+11 even
+12 every
+11 everything
+19 exchange
+22 exchanges
+30 exclusive
+18 explain
+9 extender
+10 ezscott
+11 fake
+8 far
+24 faucet
+14 fc
+16 fear
+42 feature
+17 fed
+10 financial
+98 fintech
+14 first
+21 fn
+9 focused
+12 follow
+9 followed
+27 forbes
+103 free
+42 ft
+10 fun
+14 fund
+43 future
+10 gabbard
+20 galore
+31 game
+18 gamecredits
+40 games
+25 germp
+67 get
+51 gift
+66 give
+27 giving
+20 global
+18 go
+49 gold
+9 good
+9 great
+26 gt
+9 guide
+21 gy
+25 hardware
+16 hedge
+10 hi
+17 high
+24 highest
+13 hit
+18 hits
+32 holiday
+14 hour
+42 hours
+10 ht
+17 http
+2431 https
+12 ico
+18 increased
+43 index
+21 india
+11 info
+18 internet
+18 invest
+15 investment
+37 investors
+16 io
+12 iot
+12 ireland
+23 irs
+15 iylbc
+19 jack
+60 join
+17 know
+27 kq
+19 kuveke
+14 last
+70 latest
+17 levels
+22 like
+19 link
+11 litecoin
+155 live
+19 load
+17 loading
+9 long
+42 lore
+17 lottery
+9 love
+11 low
+17 lzuu
+10 made
+15 maduro
+15 make
+49 market
+10 markets
+8 may
+13 maydkbsher
+14 medium
+22 million
+22 miner
+55 mining
+19 mins
+31 miss
+22 missed
+11 mlq
+16 mogul
+56 money
+10 month
+9 much
+12 must
+13 national
+12 near
+21 need
+10 network
+18 neutrality
+113 new
+101 news
+11 next
+10 nfptheovqb
+23 node
+24 noob
+29 offers
+21 ok
+14 okcash
+23 one
+14 open
+23 opportunities
+18 outperforms
+27 papo
+11 party
+9 past
+30 pay
+10 paying
+30 payment
+53 payments
+12 paypal
+17 pe
+29 penguin
+20 people
+10 perfect
+33 pivots
+17 pix
+13 play
+27 please
+10 pm
+24 pnlz
+24 polychain
+40 post
+10 powered
+30 present
+10 president
+167 price
+125 privacy
+10 prohibit
+21 prosecutors
+10 provide
+11 pzws
+13 qkz
+25 question
+26 raised
+10 raises
+22 ransom
+10 rayysg
+13 read
+15 ready
+9 real
+28 reddit
+10 regulatory
+10 related
+21 remittance
+10 residualbitcoin
+34 rise
+10 riser
+760 rt
+23 running
+14 russia
+46 sasha
+10 satoshi
+10 save
+9 scale
+35 season
+15 see
+15 sell
+34 services
+15 share
+12 silver
+10 simple
+124 site
+13 slowed
+25 socialmedia
+9 soon
+17 sportsbookbtc
+11 start
+21 starting
+24 startup
+9 startups
+12 state
+12 steemit
+11 still
+10 stocks
+42 stonefireio
+17 stop
+9 storage
+58 support
+13 szo
+14 take
+13 taking
+21 targets
+10 taxpayer
+52 tech
+53 technology
+20 terrybrock
+12 th
+21 thank
+20 thanks
+15 three
+11 ths
+9 time
+16 today
+19 top
+11 total
+21 trading
+14 transaction
+28 trump
+10 tulsi
+10 tv
+17 twn
+24 ufrrxhm
+10 uk
+9 upcoming
+22 upvote
+43 us
+120 usd
+12 use
+14 used
+12 using
+22 value
+9 vc
+37 venezuela
+155 via
+150 video
+38 vindyne
+10 void
+11 vs
+53 wallet
+15 wannabe
+16 want
+18 wars
+17 watch
+51 waves
+17 wavesplatform
+12 way
+29 wealthtech
+10 weapons
+15 week
+14 white
+13 win
+15 world
+11 worldwide
+17 worth
+15 would
+15 wqsums
+17 wypqn
+11 xentagz
+18 xvlq
+16 yabtcl
+20 year
+26 years
+24 yet
+19 ym
+12 youtube
+11 ytf
+12 yuan
+11 zcash
+18 zm
+
+
+Sentiment Training and Testing sets being created...
+
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+embedding_1 (Embedding)          (None, 70, 32)        64000       embedding_input_1[0][0]          
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 2240)          0           embedding_1[0][0]                
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 250)           560250      flatten_1[0][0]                  
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 1)             251         dense_1[0][0]                    
+====================================================================================================
+Total params: 624501
+____________________________________________________________________________________________________
+None
+Fitting sentiment model...
+This can take a moment.
+
+[0.68856366555055304, 0.57114228444969006]
+Accuracy: 57.11%
+
+
+----BITCOIN STOCK PRICE PREDICTOR----
+
+
+Normalizing data...
+
+Training and Testing sets being created...
+
+Training dataset dimensions (44, 1)
+Testing dataset dimensions (44, 1)
+
+Fitting LSTM Model...
+This can take a moment.
+
+Calculating predictions...
+
+Train Score:     6.3211 RMSE
+Test Score:    14.6530 RMSE
+
+Bitcoin Stock Prices Prediction Plot Stored!

@@ -1,0 +1,467 @@
+----SENTIMENT BITCOIN PREDICTION----
+
+
+Loading Data...
+
+Received all of the data!
+
+----TWEETER TWEET SENTIMENT ANALYSIS----
+
+
+Accessing Twitter API..
+
+Querying Twitter...
+
+Overall Negative
+
+Tweets Stored!
+
+Creating the vector tweets...
+
+Vocabulary word count
+
+12 aantonop
+17 accounts
+21 across
+15 activity
+8 ad
+22 address
+30 also
+35 altcoin
+17 altcoins
+9 amazon
+12 analysis
+10 andreas
+10 announced
+10 antonopoulos
+13 anybody
+24 anyone
+19 anything
+12 app
+28 aqv
+11 asset
+23 average
+54 away
+42 awesome
+11 back
+19 bank
+27 based
+11 basics
+43 behemoth
+13 best
+11 better
+15 beyond
+17 bill
+13 billion
+26 bit
+16 bitc
+2203 bitcoin
+11 bitcoinmarket
+18 bitcoinprice
+32 bitcoins
+15 bitcoinsportsbook
+10 bitcointalkandreas
+12 bitfinex
+32 bitstamp
+65 blockcdn
+352 blockchain
+20 blockchains
+35 blog
+15 bolivar
+14 bonuses
+19 bought
+17 bs
+225 btc
+24 btce
+16 btctn
+9 build
+10 business
+30 buy
+29 byteball
+11 cap
+13 capital
+17 card
+33 case
+26 cash
+42 cashouts
+42 celeberate
+15 ceo
+9 cex
+10 chain
+17 check
+31 christmas
+59 circle
+21 circulation
+13 claim
+9 class
+2331 co
+17 codes
+15 coin
+29 coinbase
+51 coindesk
+10 com
+10 companies
+10 complete
+22 compliance
+43 consumer
+8 contract
+12 coremedia
+28 cost
+16 could
+33 crypt
+99 crypto
+80 cryptocurrency
+88 currency
+17 current
+14 czk
+10 dag
+27 daily
+13 dailycoinsnet
+9 dapps
+14 dash
+13 data
+22 day
+11 days
+24 dclzt
+21 december
+9 declares
+10 designed
+10 details
+15 digg
+79 digital
+11 distribution
+10 dogecoin
+42 dragon
+9 drawing
+9 driven
+43 drops
+23 earn
+9 economics
+32 efgznrbxri
+26 elephant
+17 empty
+10 end
+108 ensures
+24 entrepreneurial
+15 eth
+84 ethereum
+12 even
+16 every
+24 exchange
+23 exchanges
+16 exclusive
+14 explain
+10 ezscott
+12 fair
+28 faucet
+14 fc
+16 fear
+42 feature
+10 fed
+8 financial
+113 fintech
+17 first
+25 fn
+11 follow
+10 followed
+18 forbes
+116 free
+42 ft
+10 full
+14 fund
+44 future
+24 galore
+9 gambling
+55 game
+32 gamecredits
+27 games
+11 gdax
+25 germp
+62 get
+52 gift
+65 give
+22 giving
+14 global
+19 go
+31 gold
+9 good
+25 gt
+9 guide
+25 gy
+26 hardware
+14 hedge
+17 high
+18 highest
+14 hit
+13 hits
+31 holiday
+12 home
+10 hour
+52 hours
+11 http
+2426 https
+14 ico
+15 increased
+40 index
+19 india
+12 info
+8 insane
+10 internet
+17 introduction
+15 invest
+12 investment
+38 investors
+12 io
+9 ireland
+14 irs
+14 iylbc
+33 jack
+9 jackpots
+14 jobs
+42 join
+16 keys
+12 know
+16 kq
+11 kraken
+33 kuveke
+17 last
+70 latest
+12 levels
+15 licence
+28 like
+12 link
+10 litecoin
+142 live
+14 load
+14 loading
+10 long
+42 lore
+24 lottery
+12 low
+13 lzuu
+9 made
+10 maduro
+14 make
+51 market
+13 markets
+14 maydkbsher
+13 medium
+12 million
+16 miner
+55 mining
+17 mins
+31 miss
+36 missed
+15 mogul
+35 money
+10 month
+9 moon
+14 national
+12 near
+18 need
+11 network
+15 neutrality
+113 new
+104 news
+11 next
+12 nfptheovqb
+10 node
+14 noob
+11 notes
+15 offers
+27 one
+18 open
+27 opportunities
+10 ordered
+32 outperforms
+17 papo
+26 party
+8 pascalcoin
+10 past
+16 pastecoin
+22 pay
+53 payments
+11 paypal
+15 pe
+15 penguin
+18 people
+18 perfect
+44 pivots
+27 pix
+9 platform
+15 play
+20 please
+9 pm
+24 pnlz
+9 poker
+16 polychain
+50 post
+15 present
+10 president
+163 price
+112 privacy
+15 problems
+11 prosecutors
+9 provably
+12 qkz
+11 question
+9 qwbvnmawke
+25 raised
+13 ransom
+20 read
+16 ready
+10 real
+9 reasons
+25 reddit
+11 remittance
+21 remittances
+9 residualbitcoin
+9 retweet
+9 review
+33 rise
+9 riser
+736 rt
+12 running
+12 russia
+55 sasha
+11 satoshi
+9 scale
+35 season
+18 see
+9 segwit
+26 sell
+10 sent
+47 services
+12 signal
+12 silver
+11 simple
+111 site
+24 socialmedia
+9 soon
+12 spark
+14 sportsbookbtc
+22 starting
+25 startup
+15 steam
+12 step
+21 stifled
+10 still
+42 stonefireio
+15 stop
+10 storage
+49 support
+9 syscoin
+12 szo
+10 take
+15 taking
+11 targets
+64 tech
+61 technology
+23 terrybrock
+15 text
+12 th
+17 thank
+27 thanks
+11 three
+11 time
+29 today
+13 tokens
+19 top
+15 trading
+10 transaction
+24 trump
+28 twn
+24 ufrrxhm
+11 uk
+9 uktjjibx
+16 unused
+10 upcoming
+9 upvote
+44 us
+119 usd
+17 use
+13 using
+16 valuable
+20 value
+40 venezuela
+152 via
+130 video
+29 vindyne
+9 virtual
+9 void
+9 vs
+53 wallet
+11 wannabe
+13 want
+15 wars
+13 watch
+59 waves
+27 wavesplatform
+12 way
+30 wealthtech
+14 week
+31 white
+20 win
+11 within
+18 world
+18 worth
+16 would
+14 wqsums
+13 wypqn
+9 xentagz
+17 xvlq
+21 yabtcl
+16 year
+22 years
+17 yet
+31 ym
+12 youtube
+11 yuan
+10 zcash
+8 zikdsvka
+18 zm
+
+
+Sentiment Training and Testing sets being created...
+
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+embedding_1 (Embedding)          (None, 70, 32)        64000       embedding_input_1[0][0]          
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 2240)          0           embedding_1[0][0]                
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 250)           560250      flatten_1[0][0]                  
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 1)             251         dense_1[0][0]                    
+====================================================================================================
+Total params: 624501
+____________________________________________________________________________________________________
+None
+Train on 998 samples, validate on 998 samples
+Epoch 1/2
+128/998 [==>...........................] - ETA: 677s - loss: 0.6932 - acc: 0.4531256/998 [======>.......................] - ETA: 563s - loss: 0.7026 - acc: 0.4805384/998 [==========>...................] - ETA: 463s - loss: 0.6976 - acc: 0.5052512/998 [==============>...............] - ETA: 365s - loss: 0.6928 - acc: 0.5332640/998 [==================>...........] - ETA: 269s - loss: 0.6909 - acc: 0.5422768/998 [======================>.......] - ETA: 172s - loss: 0.6903 - acc: 0.5443896/998 [=========================>....] - ETA: 76s - loss: 0.6870 - acc: 0.5558 998/998 [==============================] - 775s - loss: 0.6849 - acc: 0.5621 - val_loss: 0.6475 - val_acc: 0.6553
+Epoch 2/2
+128/998 [==>...........................] - ETA: 640s - loss: 0.6691 - acc: 0.6094256/998 [======>.......................] - ETA: 548s - loss: 0.6867 - acc: 0.5781384/998 [==========>...................] - ETA: 455s - loss: 0.6937 - acc: 0.5651512/998 [==============>...............] - ETA: 362s - loss: 0.6993 - acc: 0.5508640/998 [==================>...........] - ETA: 268s - loss: 0.6901 - acc: 0.5719768/998 [======================>.......] - ETA: 174s - loss: 0.6917 - acc: 0.5625896/998 [=========================>....] - ETA: 77s - loss: 0.6891 - acc: 0.5703 998/998 [==============================] - 789s - loss: 0.6879 - acc: 0.5741 - val_loss: 0.6694 - val_acc: 0.6553
+[0.66941513136059105, 0.65531062127234707]
+Accuracy: 65.53%
+
+
+----BITCOIN STOCK PRICE PREDICTOR----
+
+
+Normalizing data...
+
+Training and Testing sets being created...
+
+Training dataset dimensions (44, 1)
+Testing dataset dimensions (44, 1)
+
+Fitting LSTM Model...
+
+Calculating predictions...
+
+Train Score:     6.3211 RMSE
+Test Score:    14.6530 RMSE
+
+Bitcoin Stock Prices Prediction Plot Stored!

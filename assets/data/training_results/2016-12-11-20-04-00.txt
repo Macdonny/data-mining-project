@@ -1,0 +1,266 @@
+----SENTIMENT BITCOIN PREDICTION----
+
+
+Loading Data...
+
+Received all of the data!
+
+----TWEETER TWEET SENTIMENT ANALYSIS----
+
+
+Accessing Twitter API..
+
+Querying Twitter...
+
+Overall Negative
+
+Tweets Stored!
+
+Creating the vector tweets...
+
+Vocabulary word count
+
+12 across
+18 address
+10 also
+20 altcoin
+20 anyone
+10 aqv
+12 average
+32 away
+26 awesome
+22 behemoth
+12 bill
+8 billion
+11 bit
+1146 bitcoin
+10 bitcoinprice
+13 bitcoins
+9 bitcoinsportsbook
+14 bitstamp
+31 blockcdn
+171 blockchain
+10 blockchains
+11 blog
+11 bonuses
+10 bs
+109 btc
+13 btce
+11 btctn
+12 buy
+23 byteball
+10 card
+11 case
+20 cash
+26 cashouts
+26 celeberate
+9 check
+18 christmas
+24 circle
+1161 co
+10 coinbase
+33 coindesk
+22 consumer
+9 cost
+12 crypt
+62 crypto
+49 cryptocurrency
+36 currency
+10 current
+14 czk
+15 daily
+11 dailycoinsnet
+9 dash
+10 day
+12 dclzt
+10 december
+8 declares
+29 digital
+11 distribution
+26 dragon
+22 drops
+11 earn
+8 economics
+11 efgznrbxri
+8 end
+83 ensures
+12 entrepreneurial
+10 eth
+41 ethereum
+14 exchange
+13 exchanges
+12 exclusive
+10 ezscott
+14 faucet
+11 fc
+26 feature
+34 fintech
+10 first
+12 fn
+57 free
+26 ft
+16 future
+12 galore
+18 game
+11 gamecredits
+17 games
+10 germp
+30 get
+25 gift
+37 give
+12 giving
+9 global
+12 go
+23 gold
+24 gt
+13 gy
+9 hit
+17 holiday
+22 hours
+1215 https
+37 index
+11 india
+10 invest
+14 investors
+14 iylbc
+12 jack
+30 join
+12 kuveke
+46 latest
+13 like
+12 link
+104 live
+26 lore
+9 lottery
+12 lzuu
+8 maduro
+30 market
+8 maydkbsher
+11 medium
+20 mining
+14 miss
+13 missed
+10 mogul
+19 money
+8 near
+13 need
+58 new
+55 news
+8 next
+11 offers
+14 one
+8 open
+13 opportunities
+8 otika
+11 outperforms
+31 payments
+15 pe
+11 penguin
+13 people
+8 perfect
+22 pivots
+10 pix
+8 please
+9 pm
+23 pnlz
+19 post
+12 present
+8 president
+106 price
+87 privacy
+11 qkz
+10 raised
+9 read
+9 ready
+20 reddit
+12 rise
+8 riser
+407 rt
+29 sasha
+8 satoshi
+19 season
+21 services
+9 silver
+8 simple
+84 site
+22 socialmedia
+9 sportsbookbtc
+13 starting
+26 stonefireio
+30 support
+11 szo
+31 tech
+33 technology
+12 terrybrock
+13 thanks
+10 top
+15 trump
+10 twn
+23 ufrrxhm
+9 upcoming
+26 us
+76 usd
+17 value
+23 venezuela
+73 via
+92 video
+27 vindyne
+27 wallet
+11 want
+30 waves
+10 wavesplatform
+12 wealthtech
+10 win
+13 world
+8 worth
+12 would
+14 wqsums
+12 wypqn
+8 yabtcl
+8 year
+12 ym
+11 yuan
+
+
+Sentiment Training and Testing sets being created...
+
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+embedding_1 (Embedding)          (None, 70, 32)        32000       embedding_input_1[0][0]          
+____________________________________________________________________________________________________
+flatten_1 (Flatten)              (None, 2240)          0           embedding_1[0][0]                
+____________________________________________________________________________________________________
+dense_1 (Dense)                  (None, 250)           560250      flatten_1[0][0]                  
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 1)             251         dense_1[0][0]                    
+====================================================================================================
+Total params: 592501
+____________________________________________________________________________________________________
+None
+Train on 498 samples, validate on 498 samples
+Epoch 1/2
+128/498 [======>.......................] - ETA: 212s - loss: 0.6920 - acc: 0.5391256/498 [==============>...............] - ETA: 138s - loss: 0.7049 - acc: 0.5234384/498 [======================>.......] - ETA: 65s - loss: 0.6998 - acc: 0.5312 498/498 [==============================] - 297s - loss: 0.6976 - acc: 0.5341 - val_loss: 0.6933 - val_acc: 0.4237
+Epoch 2/2
+128/498 [======>.......................] - ETA: 213s - loss: 0.6932 - acc: 0.4844256/498 [==============>...............] - ETA: 137s - loss: 0.6946 - acc: 0.4609384/498 [======================>.......] - ETA: 64s - loss: 0.6943 - acc: 0.4661 498/498 [==============================] - 294s - loss: 0.6939 - acc: 0.4819 - val_loss: 0.6890 - val_acc: 0.5763
+[0.68896793098334808, 0.57630522016540586]
+Accuracy: 57.63%
+
+
+----BITCOIN STOCK PRICE PREDICTOR----
+
+
+Normalizing data...
+
+Training and Testing sets being created...
+
+Training dataset dimensions (13, 1)
+Testing dataset dimensions (14, 1)
+
+Fitting LSTM Model...
+
+Calculating predictions...
+
+Train Score:    13.7498 RMSE
+Test Score:    25.9327 RMSE
+Bitcoin Stock Prices Prediction Plot Stored!
